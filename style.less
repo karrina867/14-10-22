@@ -1,0 +1,84 @@
+/*наличие переменных*/
+@primary-color:rgb(255,255,255);
+@secondary-color:rgb(0,0,0);
+@primary-bc-color:rgb(0,0,0);
+@secondary-bc-color:rgb(255,255,255);
+
+@p-height: 1vw;
+@p-width: 2vw;
+
+@uri1: 'https://cdn-icons-png.flaticon.com/128/181';
+@url2:'https://cdn.prixabay.com/photo/';
+
+/*использование миксин*/
+.background(){
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flex(@direction,@justify,@aline,@wrap){
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @aline;
+    flex-wrap: @wrap;
+}
+.shadow1(@color){
+    position: relative;
+    box-shadow: 0 1px 4px rgba(@color, @color, @color, 0.3,0 30px rgba(@color,@color));
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main{
+    background-color: @secondary-bc-color;
+    color: @secondary-color;
+    padding: @p-height @p-width;
+
+    &-content{
+        .flex(column,center,center, no-wrap);
+        padding: 1vw;
+        .shadow1(0);
+        h2{
+            font-size: calc(1.3rem +1.3vmin);
+        }
+        p{
+            width: 70%;
+            text-align: center;
+            font-size: calc(0.7rem +0.7vmin) ;
+        }
+    }
+    &-container{
+        width: 100%;
+        .flex(row, space-evenly, center,no-wrap);
+        padding: 3vw 0;
+        &-image{
+            width: 5vw;
+            height: 5vw;
+            .background;
+            &:nth-child(1){
+                background-image:url('@{url1}181540.png');
+            }
+            &:nth-child(2)
+            {
+                background-image:url('@{url1}181540.png');
+            }
+            &:nth-child(3)
+            {
+                background-image:url('@{url1}181540.png');
+            }
+            &:nth-child(4) {
+                background-image:url('@{url1}181540.png');
+            }
+        }
+    }
+}
+

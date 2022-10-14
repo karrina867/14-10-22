@@ -1,0 +1,35 @@
+.first {
+	background-color: #a414ae;
+	color: #faf7f7;
+	position: fixed top 0px;
+}
+
+.second {
+	color: #faf7f7;
+	position: fixed top 0px;
+	height: 400px;
+	background-image: url(bg_header.jpg);
+	text-align: center;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.less-one {
+	width: 200px;
+}
+
+.less-two {
+	width: 200px;
+}
+
+.less-three {
+	width: 200px;
+}

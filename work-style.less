@@ -1,0 +1,41 @@
+@first-and-second-color:rgb(164, 20, 174);
+@text-color:rgb(250, 247, 247);
+
+
+.background(){
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+}
+.first{
+    background-color:@first-and-second-color ;
+    color:@text-color;
+    position: fixed top 0px;
+}
+.second{
+    color:@text-color;
+    position: fixed top 0px;
+    height: 400px;
+    background-image:url(./bg_header.jpg) ;
+    text-align: center;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.less{
+    &-one{
+        width: 200px;
+    }
+    &-two{
+        width: 200px;
+    }
+    &-three{
+        width: 200px;
+    }
+}
